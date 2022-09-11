@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { TextField } from "@mui/material";
 import axios from "axios";
 import CardUser from "../Carduser/CardUser";
@@ -35,11 +35,7 @@ const Form = () => {
         />
         <button className="btn">Buscar</button>
       </form>
-        {user.id ? (
-          <CardUser data={user} />
-        ) : (
-          <p>No Hiciste ninguna Busqeda!!</p>
-        )}
+      {user.id ? <CardUser data={user} /> : <p>No Hiciste ninguna Busqeda!!</p>}
     </div>
   );
 };
